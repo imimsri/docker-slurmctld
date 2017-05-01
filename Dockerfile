@@ -1,5 +1,4 @@
 FROM jmcarbo/docker-slurmbase
-#FROM datadrivenhpc/slurmbase-local
 
 MAINTAINER Ole Weidner <ole.weidner@ed.ac.uk>
 
