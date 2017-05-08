@@ -9,4 +9,10 @@ RUN chmod +x /root/start.sh
 
 ADD etc/supervisord.d/slurmctld.conf /etc/supervisor/conf.d/slurmctld.conf
 
-CMD ["/bin/bash","/root/start.sh"]
+COPY etc/* etc/
+COPY bin/* /usr/local/bin/
+RUN chmod +x /usr/local/bin/slurmctld-manage
+
+#CMD ["/bin/bash","/root/start.sh"]
+CMD containerpilot -config file:///etc/containerpilot.json /usr/sbin/slurmctld -D -v 
+ 
