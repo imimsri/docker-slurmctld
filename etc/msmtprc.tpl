@@ -5,7 +5,7 @@ ccount do-not-reply
 auto_from on
 domain {{ $domain }}
 maildomain {{ $domain }}
-host {{ $smtp_host }}
+host {{ $smtp-host }}
 auth off
 from do-not-reply@{{$domain}}
 account default: do-not-reply
