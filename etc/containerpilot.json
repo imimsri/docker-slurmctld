@@ -32,7 +32,9 @@
                   "-consul-addr",
                   "{{ if .CONSUL_AGENT }}localhost{{ else }}{{ if .CONSUL }}{{ .CONSUL }}{{ else }}consul{{ end }}{{ end }}:8500",
                   "-template",
-                  "/etc/users.tpl:/tmp/users.sh:/bin/bash /tmp/users.sh"
+                  "/etc/users.tpl:/tmp/users.sh:/bin/bash /tmp/users.sh",
+                  "-template",
+                  "/etc/msmtprc.tpl:/etc/msmtprc"
 	  ],
       "restarts": "unlimited"
     }

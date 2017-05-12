@@ -1,0 +1,9 @@
+#!/bin/bash 
+mytmp=$(mktemp /tmp/slurm.email.XXXXXX)
+echo  "From: slurm@imim.es" > $mytmp
+echo Subject: $2 >> $mytmp
+echo To: $3 >> $mytmp
+echo >> $mytmp
+echo $2 >> $mytmp
+cat $mytmp | /usr/bin/msmtp -a default $3
+rm $mytmp
