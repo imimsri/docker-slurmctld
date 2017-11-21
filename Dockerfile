@@ -18,5 +18,4 @@ RUN chmod +x /usr/local/bin/slurmctld-manage
 RUN chmod +x /usr/local/bin/mymsmtp.wrapper
 
 #CMD ["/bin/bash","/root/start.sh"]
-CMD containerpilot -config file:///etc/containerpilot.json /usr/sbin/slurmctld -D -v 
- 
+CMD containerpilot -config file:///etc/containerpilot.json /usr/local/sbin/slurmctld -D -v 
