@@ -1,6 +1,6 @@
-FROM jmcarbo/docker-slurmbase
+FROM imimsri/docker-slurmbase
 
-MAINTAINER Joan Marc Carbo Arnau <jmcarbo@gmail.com>
+MAINTAINER IMIM SRI <sri@imim.cat>
 
 RUN apt-get update && apt-get install -y msmtp
 
